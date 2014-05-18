@@ -1,7 +1,10 @@
 package crazypants.enderio.machine.painter;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderBlocks;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
@@ -62,8 +65,13 @@ public class PaintedItemRenderer implements IItemRenderer {
     }
     Item i = item.getItem();
     if(i instanceof ItemBlock) {
-      renderBlocks.renderBlockAsItem(((ItemBlock) i).field_150939_a, item.getItemDamage(), 1.0f);
-    }
+      if(i instanceof BlockItemPaintedDoor) {
+        RenderItem ri = new RenderItem();
+        ri.renderItemIntoGUI(Minecraft.getMinecraft().fontRenderer, Minecraft.getMinecraft().renderEngine, new ItemStack(Items.wooden_door,item.stackSize, item.getItemDamage()), 0,0);
+      } else {
+        renderBlocks.renderBlockAsItem(((ItemBlock) i).field_150939_a, item.getItemDamage(), 1.0f);
+      }
+    } 
 
     renderBlocks.clearOverrideBlockTexture();
   }

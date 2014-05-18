@@ -58,7 +58,14 @@ public final class PainterUtil {
       tag = new NBTTagCompound();
       item.setTagCompound(tag);
     }
-    tag.setString(BlockPainter.KEY_SOURCE_BLOCK_ID, Block.blockRegistry.getNameForObject(source));
+    
+    String name = Block.blockRegistry.getNameForObject(source);
+    System.out.println("PainterUtil.setSourceBlock: " + name);
+    if(name == null || name.trim().length() == 0) {
+      System.out.println("PainterUtil.setSourceBlock: Could not get name for source block: " + source);
+      return;
+    }
+    tag.setString(BlockPainter.KEY_SOURCE_BLOCK_ID, name);
     tag.setInteger(BlockPainter.KEY_SOURCE_BLOCK_META, meta);
   }
 

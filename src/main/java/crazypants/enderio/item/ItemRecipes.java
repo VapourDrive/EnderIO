@@ -23,7 +23,6 @@ public class ItemRecipes {
     
     ItemStack magnet = new ItemStack(EnderIO.itemMagnet, 1, 0);    
     EnderIO.itemMagnet.setEnergy(magnet, 0);
-    //GameRegistry.addShapedRecipe(magnet, "s s", "c  c", "cvc", 's', electricalSteel, 'c', conductiveIron, 'v', vibCry);
     GameRegistry.addShapedRecipe(magnet, "scc", "  v", "scc", 's', electricalSteel, 'c', conductiveIron, 'v', vibCry);
 
     //Dark Steel        
