@@ -3,14 +3,14 @@
   "modid": "EnderIO",
   "name": "Ender IO",
   "description": "Compact conduits, painted things and access to your stuff through an eye of ender.",
-  "version": "1.0.6",
-  "mcversion": "1.6.4",
+  "version": "${version}.${buildnumber}",
+  "mcversion": "${mcversion}",
   "url": "http://enderio.com",
   "updateUrl": "",
   "authors": [
     "crazypants"
   ],
-  "credits": "By crazypants, using the buildcraft API, and the cglib library.",
+  "credits": "By CrazyPants, with the help of many",
   "logoFile": "",
   "screenshots": [
   ],

@@ -1,8 +1,25 @@
-/bin
-/build
 /download
-/.settings/org.eclipse.jdt.core.prefs
-
 /eclipseBin
 
-/New folder
+## gradle
+/.gradle
+/build
+
+## ForgeGradle
+/run
+
+## eclipse
+/eclipse
+/.settings
+/.metadata
+/.classpath
+/.project
+/bin
+
+## intellij
+/out
+/.idea
+/*.iml
+/*.ipr
+/*.iws
+/atlassian-ide-plugin.xml
